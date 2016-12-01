@@ -6,8 +6,7 @@ object Solution {
     def main(args: Array[String]) {
         Iterator.continually(readInt)
           .take (readInt)
-          .map (isPrime) 
-          .map { if (_) "Prime" else "Not prime" } 
+          .map { n => if (isPrime(n)) "Prime" else "Not prime" } 
           .foreach (println)
     }
 }
